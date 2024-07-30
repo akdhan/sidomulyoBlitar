@@ -2,6 +2,7 @@
             font-family: Arial, Helvetica, sans-serif;
             line-height: 20px;
             font-size: 15px;
+            box-sizing: border-box;
         }
         
         html {
@@ -88,14 +89,14 @@
         
         header {
             position: relative;
-            height: 100vh;
+            display: flex;
             width: 100%;
             overflow: hidden;
             z-index: 2;
         }
         
         header video {
-            position: absolute;
+            position: relative;
             top: 0;
             left: 0;
             object-fit: cover;
@@ -244,16 +245,20 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            flex-wrap: wrap;
             overflow: hidden;
             padding: 10px 0px;
         }
         
         section#gallery div {
             padding: 10px;
+            width: 100%;
+            max-width: 200px;
         }
         
         section#gallery div img {
             height: 100px;
+            width: 100%;
             border-radius: 5px;
         }
         
@@ -289,6 +294,7 @@
         
         .blog .area {
             width: 70%;
+            max-width: 700px;
             box-shadow: 0px -10px 30px #ccc;
             border-radius: 5px;
             display: flex;
@@ -310,6 +316,7 @@
             background-position: center;
             height: 200px;
             width: 30%;
+            max-width: 600px;
         }
         
         .blog .area .text {
@@ -340,7 +347,7 @@
         }
         
         .grid {
-            display: grid;
+            display: flex;
             grid-template-columns: repeat(1, 1fr);
             gap: 30px;
             margin: 80px auto;
@@ -361,6 +368,7 @@
         .grid>article img {
             border-radius: 20px;
             margin-right: 20px;
+            max-width: 200px;
             width: 200px;
             height: 300px;
         }
@@ -422,10 +430,12 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         
         footer .layar-dalam div {
-            width: 30%;
+            width: 100%;
+            max-width: 300px;
         }
         
         footer .layar-dalam h5 {
@@ -591,8 +601,7 @@
             background: url("asset/quote-icon.png") no-repeat;
             padding: 40px;
         }
-        
-        @media (max-width: 1200px) {
+        /* @media (max-width: 1200px) {
             .layar-dalam {
                 padding: 10px;
             }
@@ -623,4 +632,4 @@
             .tombol {
                 padding: 5px 10px;
             }
-        }
+        } */
